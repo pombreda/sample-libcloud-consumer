@@ -1,6 +1,9 @@
-import os
+import os, sys
+import libcloud
 from libcloud.storage.types import Provider
 from libcloud.storage.providers import get_driver
+
+libcloud.enable_debug(sys.stdout)
 
 class Cloudy(object):
     def cloudy(self):
